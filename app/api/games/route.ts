@@ -101,7 +101,6 @@ export async function POST(req: Request, res: Response) {
     if (error instanceof ZodError) {
       return NextResponse.json({ error: error.issues }, { status: 400 });
     }
-    console.log(error);
     return NextResponse.json(
       {
         error: "Something went wrong",
